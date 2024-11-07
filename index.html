@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* Body styling for center alignment and background */
+        body {
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Calculator container styling */
+        #Calculator {
+            width: 230px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #212121;
+            padding: 10px;
+        }
+        
+        /* Display styling */
+        #display {
+            width: 90%;
+            height: 60px;
+            font-size: 32px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #5da547;
+            color: black;
+            border: none;
+            border-radius: 20px;
+        }
+
+        /* General button styling */
+        .button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 2px;
+            color: white;
+        }
+        
+        /* Button colors for different functions */
+        .button-operator { background-color: #ff9800; } /* Orange for operators */
+        .button-clear { background-color: #2858a0; } /* Blue for clear button */
+        .button-equal { background-color: #4caf50; } /* Green for equal button */
+        .button { background-color: #4db6ac; } /* Teal for number buttons */
+
+        /* Button container alignment */
+        #Calculator br {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="Calculator">
+        <input type="text" id="display" disabled />
+        <br  />
+            <button class="button" onclick="appendNumber(7)">7</button>
+            <button class="button" onclick="appendNumber(8)">8</button>
+            <button class="button" onclick="appendNumber(9)">9</button>
+            <button class="button button-operator" onclick="setOperator('+')">+</button>
+        <br  />    
+            <button class="button" onclick="appendNumber(4)">4</button>
+            <button class="button" onclick="appendNumber(5)">5</button>
+            <button class="button" onclick="appendNumber(6)">6</button>
+            <button class="button button-operator" onclick="setOperator('-')">-</button>
+        <br  />
+            <button class="button" onclick="appendNumber(1)">1</button>
+            <button class="button" onclick="appendNumber(2)">2</button>
+            <button class="button" onclick="appendNumber(3)">3</button>
+            <button class="button button-operator" onclick="setOperator('*')">*</button>
+        <br  />    
+            <button class="button button-clear" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="appendNumber('0')">0</button>
+            <button class="button button-equal" onclick="calculate()">=</button>
+            <button class="button button-operator" onclick="setOperator('/')">/</button>    
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
